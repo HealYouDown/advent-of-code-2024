@@ -14,10 +14,7 @@ with open("inputs/day_01.txt", "r") as fp:
 left.sort()
 right.sort()
 
-diffs = []
-for a, b in zip(left, right):
-    diff = abs(a - b)
-    diffs.append(diff)
+diffs = [abs(a - b) for a, b in zip(left, right)]
 
 print("Puzzle 1:", sum(diffs))
 
